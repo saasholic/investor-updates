@@ -1,5 +1,7 @@
 # Investor updates: a Claude skill for founders
 
+Built by [SaaSholic](https://saasholic.com), a seed-stage venture fund, for the founders it works with.
+
 Turn your monthly numbers into a short founder letter that investors and VCs actually read, in about 5 minutes a month.
 
 You drop in your monthly report (PDF or spreadsheet). Claude asks at most 3 quick questions, then writes:

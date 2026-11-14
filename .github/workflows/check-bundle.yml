@@ -1,0 +1,21 @@
+name: check-bundle
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  zip-parity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify investor-updates.zip matches investor-updates/
+        run: python3 scripts/check_zip_parity.py --check
+      - name: Run parity checker unit tests
+        run: python3 -m unittest discover -s tests -v
